@@ -22,8 +22,8 @@ public class AdminDAOTest {
 		bean.setBId(105);
 		bean.setBookName("Java");
 		bean.setAuthor("James");
-		bean.setCategory("Programing");
-		bean.setPublisher("Arihent");
+		bean.setCategory("Programming");
+		bean.setPublisher("skpublications");
 		boolean check = dao.addBook(bean);
 		Assertions.assertTrue(check);
 	}
@@ -33,8 +33,8 @@ public class AdminDAOTest {
 		bean.setBId(105);
 		bean.setBookName("Java");
 		bean.setAuthor("James");
-		bean.setCategory("Programing");
-		bean.setPublisher("Arihent");
+		bean.setCategory("Programming");
+		bean.setPublisher("skpublications");
 		boolean check = dao.addBook(bean);
 		Assertions.assertFalse(check);	
 	} 
@@ -55,7 +55,7 @@ public class AdminDAOTest {
 	public void testUpdateBookValid() {
 		BookBean book = new BookBean();
 		book.setBId(104);
-		book.setBookName("Maths");
+		book.setBookName("jdbc");
 		boolean check = dao.updateBook(book);
 		Assertions.assertTrue(check);
 	}
@@ -64,7 +64,7 @@ public class AdminDAOTest {
 	public void testUpdateBookInvalid() {
 		BookBean book = new BookBean();
 		book.setBId(109);
-		book.setBookName("Maths");
+		book.setBookName("jdbc");
 		boolean check = dao.updateBook(book);
 		Assertions.assertFalse(check);
 	}

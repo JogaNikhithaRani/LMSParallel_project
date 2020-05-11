@@ -21,8 +21,8 @@ private AdminService service = new AdminServiceImplement();
 		bean.setBId(105);
 		bean.setBookName("Java");
 		bean.setAuthor("James");
-		bean.setCategory("Programing");
-		bean.setPublisher("Arihent");
+		bean.setCategory("Programming");
+		bean.setPublisher("skpublications");
 		boolean check = service.addBook(bean);
 		Assertions.assertTrue(check);
 	}
@@ -32,8 +32,8 @@ private AdminService service = new AdminServiceImplement();
 		bean.setBId(105);
 		bean.setBookName("Java");
 		bean.setAuthor("James");
-		bean.setCategory("Programing");
-		bean.setPublisher("Arihent");
+		bean.setCategory("Programming");
+		bean.setPublisher("skpublications");
 		boolean check = service.addBook(bean);
 		Assertions.assertFalse(check);	
 	} 
@@ -54,7 +54,7 @@ private AdminService service = new AdminServiceImplement();
 	public void testUpdateBookValid() {
 		BookBean book = new BookBean();
 		book.setBId(104);
-		book.setBookName("Maths");
+		book.setBookName("jdbc");
 		boolean check = service.updateBook(book);
 		Assertions.assertTrue(check);
 	}
@@ -63,7 +63,7 @@ private AdminService service = new AdminServiceImplement();
 	public void testUpdateBookInvalid() {
 		BookBean book = new BookBean();
 		book.setBId(109);
-		book.setBookName("Maths");
+		book.setBookName("jdbc");
 		boolean check = service.updateBook(book);
 		Assertions.assertFalse(check);
 	}

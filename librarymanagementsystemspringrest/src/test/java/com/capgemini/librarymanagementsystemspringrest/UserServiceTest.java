@@ -17,10 +17,10 @@ private UsersService service ;
 	@Test
 	public void testRegisterValid() {
 		UsersBean bean = new UsersBean();
-		bean.setFirstName("Sridhar");
-		bean.setLastName("Bendhi");
-		bean.setEmail("sridhar@gmail.com");
-		bean.setPassword("Sridhar@123");
+		bean.setFirstName("prasad");
+		bean.setLastName("jogajoga");
+		bean.setEmail("prasadjoga@gmail.com");
+		bean.setPassword("Nikhithsharath@11");
 		bean.setRole("student");
 		boolean check = service.register(bean);
 		Assertions.assertTrue(check);		
@@ -29,10 +29,10 @@ private UsersService service ;
 	@Test
 	public void testRegisterInvalid() {
 		UsersBean bean = new UsersBean();
-		bean.setFirstName("Sridhar");
-		bean.setLastName("Bendhi");
-		bean.setEmail("sridhar@gmail.com");
-		bean.setPassword("Sridhar@123");
+		bean.setFirstName("prasad");
+		bean.setLastName("jogajoga");
+		bean.setEmail("prasadjoga@gmail.com");
+		bean.setPassword("Nikhithasharath@11");
 		bean.setRole("student");
 		boolean check = service.register(bean);
 		Assertions.assertFalse(check);
@@ -40,13 +40,13 @@ private UsersService service ;
 
 	@Test
 	public void testLoginValid() {
-		UsersBean info = service.login("ammu@gmail.com", "ammU@123");
+		UsersBean info = service.login("jogachikky@gmail.com", "Arunaprasad@11");
 		Assertions.assertNotNull(info);
 	}
 	
 	@Test
 	public void testLoginInvalid() {
-		UsersBean info = service.login("ammu@gmail.com", "ammU123");
+		UsersBean info = service.login("jogachikky@gmail.com", "Arunaprasad11");
 		Assertions.assertNull(info);
 	}
 	
@@ -109,13 +109,13 @@ private UsersService service ;
 	
 	@Test
 	public void testUpdatePasswordValid() {
-		boolean check = service.updatePassword(100102, "ammU@123", "Admin@123", "admin");
+		boolean check = service.updatePassword(100102, "Arunaprasad@11", "Admin@123", "admin");
 		Assertions.assertTrue(check);
 	}
 	
 	@Test
 	public void testUpdatePasswordInvalid() {
-		boolean check = service.updatePassword(100102, "ammU@123", "Admin@123", "student");
+		boolean check = service.updatePassword(100102, "Arunaprasad@11", "Admin@123", "student");
 		Assertions.assertFalse(check);
 	}
 	

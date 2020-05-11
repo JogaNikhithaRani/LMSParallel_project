@@ -43,10 +43,10 @@ public class AdminDAOTest {
 	public void testRegisterAdminValid() {
 		AdminBean adn=new AdminBean();
 		adn.setId(123445);
-		adn.setName("amulya");
+		adn.setName("nikhitha");
 		adn.setMobile(994920634);
-		adn.setEmail("amulya@gmail.com");
-		adn.setPassword("Amulya@123");
+		adn.setEmail("joganikhitha@gmail.com");
+		adn.setPassword("Arunaprasad@11");
 		boolean status=dao.registerAdmin(adn);
 		Assertions.assertTrue(status);
 	}
@@ -55,23 +55,23 @@ public class AdminDAOTest {
 	public void testRegisterAdminInvalid() {
 		AdminBean adn=new AdminBean();
 		adn.setId(123445);
-		adn.setName("amulya");
-		adn.setMobile(994920634);
-		adn.setEmail("amulya@gmail.com");
-		adn.setPassword("Amulya@123");
+		adn.setName("nikhitha");
+		adn.setMobile(984816573);
+		adn.setEmail("joganikhitha@gmail.com");
+		adn.setPassword("Arunaprasad@11");
 		boolean status=dao.registerAdmin(adn);
 		Assertions.assertFalse(status);
 	}
 	
 	@Test
 	public void testLoginAdminValid() {
-		AdminBean info = dao.loginAdmin("amulya@gmail.com", "Amulya@123");
+		AdminBean info = dao.loginAdmin("joganikhitha@gmail.com", "Arunaprasad@11");
 		Assertions.assertNotNull(info);
 	}
 	
 	@Test
 	public void testLoginAdminInvalid() {
-		AdminBean info = dao.loginAdmin("amulya@gmail.com", "Amulya123");
+		AdminBean info = dao.loginAdmin("aruna@gmail.com", "Arunaprasad123");
 		Assertions.assertNull(info);
 	}
 	

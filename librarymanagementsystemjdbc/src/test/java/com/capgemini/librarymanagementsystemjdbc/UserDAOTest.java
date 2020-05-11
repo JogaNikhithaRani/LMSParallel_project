@@ -17,10 +17,10 @@ public class UserDAOTest {
 	public void testRegisterValid() {
 		UsersBean bean = new UsersBean();
 		bean.setuId(100005);
-		bean.setFirstName("Sridhar");
-		bean.setLastName("Bendhi");
-		bean.setEmail("sridhar@gmail.com");
-		bean.setPassword("Sridhar@123");
+		bean.setFirstName("prasad");
+		bean.setLastName("jogajoga");
+		bean.setEmail("prasadjoga@gmail.com");
+		bean.setPassword("Nikhithasharath@11");
 		bean.setRole("student");
 		boolean check = dao.register(bean);
 		Assertions.assertTrue(check);		
@@ -30,10 +30,10 @@ public class UserDAOTest {
 	public void testRegisterInvalid() {
 		UsersBean bean = new UsersBean();
 		bean.setuId(100005);
-		bean.setFirstName("Sridhar");
-		bean.setLastName("Bendhi");
-		bean.setEmail("sridhar@gmail.com");
-		bean.setPassword("Sridhar@123");
+		bean.setFirstName("prasad");
+		bean.setLastName("jogajoga");
+		bean.setEmail("prasadjoga@gmail.com");
+		bean.setPassword("Nikhithasharath@11");
 		bean.setRole("student");
 		boolean check = dao.register(bean);
 		Assertions.assertFalse(check);
@@ -41,13 +41,13 @@ public class UserDAOTest {
 
 	@Test
 	public void testLoginValid() {
-		UsersBean info = dao.login("ammu@gmail.com", "ammU@123");
+		UsersBean info = dao.login("jogachikky@gmail.com", "Arunaprasad@11");
 		Assertions.assertNotNull(info);
 	}
 	
 	@Test
 	public void testLoginInvalid() {
-		UsersBean info = dao.login("ammu@gmail.com", "ammU123");
+		UsersBean info = dao.login("jogachikky@gmail.com", "Arunaprasad11");
 		Assertions.assertNull(info);
 	}
 	
@@ -110,13 +110,13 @@ public class UserDAOTest {
 	
 	@Test
 	public void testUpdatePasswordValid() {
-		boolean check = dao.updatePassword("ammu@gmail.com", "ammU@123", "Admin@123", "admin");
+		boolean check = dao.updatePassword("jogachikky@gmail.com", "Arunaprasad@11", "Admin@123", "admin");
 		Assertions.assertTrue(check);
 	}
 	
 	@Test
 	public void testUpdatePasswordInvalid() {
-		boolean check = dao.updatePassword("amm@gmail.com", "ammU@123", "Admin@123", "student");
+		boolean check = dao.updatePassword("jogachikk@gmail.com", "Arunaprasad@11", "Admin@123", "student");
 		Assertions.assertFalse(check);
 	}
 	

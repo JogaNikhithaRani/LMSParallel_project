@@ -19,10 +19,10 @@ private UserService service=new UserServiceImplementation();
 	public void testRegisterStudentValid() {
 		UserBean info=new UserBean();
 		info.setId(78965);
-		info.setName("shiva");
-		info.setEmail("shiva@gmail.com");
-		info.setPassword("Shiva@123");
-		info.setDepartment("ECE");
+		info.setName("chikky");
+		info.setEmail("jogachikky@gmail.com");
+		info.setPassword("Arunaprasad@11");
+		info.setDepartment("CSC");
 		info.setPhone(987582645);
 		boolean status=service.registerUser(info);
 		Assertions.assertTrue(status);
@@ -32,23 +32,23 @@ private UserService service=new UserServiceImplementation();
 	public void testRegisterStudentInvalid() {
 		UserBean info=new UserBean();
 		info.setId(78965);
-		info.setName("shiva");
-		info.setEmail("shiva@gmail.com");
-		info.setPassword("Shiva@123");
-		info.setDepartment("ECE");
+		info.setName("chikky");
+		info.setEmail("jogachikky@gmail.com");
+		info.setPassword("Arunaprasad@11");
+		info.setDepartment("CSC");
 		info.setPhone(987582645);
 		boolean status=service.registerUser(info);
 		Assertions.assertFalse(status);
 	}
 	@Test
 	public void testLoginUserValid() {
-		UserBean status = service.loginUser("shiva@gmail.com", "Shiva@123");
+		UserBean status = service.loginUser("jogachikky@gmail.com", "Arunaprasad@11");
 		Assertions.assertNotNull(status);
 	}
 
 	@Test
 	public void testLoginUserInvalid() {
-		UserBean status = service.loginUser("shiva@gmail.com", "Shiva123");
+		UserBean status = service.loginUser("jogachikky@gmail.com", "Arunaprasad11");
 		Assertions.assertNull(status);
 	}
 

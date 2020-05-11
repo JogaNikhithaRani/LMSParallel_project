@@ -17,10 +17,10 @@ public class UserDAOTest {
 	@Test
 	public void testRegisterValid() {
 		UsersBean bean = new UsersBean();
-		bean.setFirstName("Sridhar");
-		bean.setLastName("Bendhi");
-		bean.setEmail("sridhar@gmail.com");
-		bean.setPassword("Sridhar@123");
+		bean.setFirstName("prasad");
+		bean.setLastName("jogajoga");
+		bean.setEmail("prasadjoga@gmail.com");
+		bean.setPassword("Nikhithasharath@11");
 		bean.setRole("student");
 		boolean check = dao.register(bean);
 		Assertions.assertTrue(check);		
@@ -29,10 +29,10 @@ public class UserDAOTest {
 	@Test
 	public void testRegisterInvalid() {
 		UsersBean bean = new UsersBean();
-		bean.setFirstName("Sridhar");
-		bean.setLastName("Bendhi");
-		bean.setEmail("sridhar@gmail.com");
-		bean.setPassword("Sridhar@123");
+		bean.setFirstName("prasad");
+		bean.setLastName("jogajoga");
+		bean.setEmail("prasadjoga@gmail.com");
+		bean.setPassword("Nikhithasharath@11");
 		bean.setRole("student");
 		boolean check = dao.register(bean);
 		Assertions.assertFalse(check);
@@ -109,13 +109,13 @@ public class UserDAOTest {
 	
 	@Test
 	public void testUpdatePasswordValid() {
-		boolean check = dao.updatePassword(100102, "ammU@123", "Admin@123", "admin");
+		boolean check = dao.updatePassword(100102, "Arunaprasad@11", "Admin@123", "admin");
 		Assertions.assertTrue(check);
 	}
 	
 	@Test
 	public void testUpdatePasswordInvalid() {
-		boolean check = dao.updatePassword(100102, "ammU@123", "Admin@123", "student");
+		boolean check = dao.updatePassword(100102, "Arunaprasad@11", "Admin@123", "student");
 		Assertions.assertFalse(check);
 	}
 	

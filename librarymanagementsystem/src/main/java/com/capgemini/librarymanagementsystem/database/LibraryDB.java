@@ -15,13 +15,12 @@ public class LibraryDB {
 
 	public static void addToDB() {
 
-		ADMIN.add(new AdminBean(111111,"Amulya","Ammu@123","ammu@gmail.com",785963147));
+		ADMIN.add(new AdminBean(111111,"nikhitha","Arunaprasad@11","joganikhitha@gmail.com",785963147));
 
-		//USER.add(new User(111111,"ramya","ramya@gmail.com","Ramya@123","cse",7788997788,07/08/2020,02/02/2020);
 		
 		BOOKS.add(new BookBean(101010,"java","james","gosling","coding"));
-		BOOKS.add(new BookBean(101011,"history","tom","henry feild","world"));
-		BOOKS.add(new BookBean(101012,"angular","misko","adam","js"));
+		BOOKS.add(new BookBean(101011,"civics","tom","henry feild","world"));
+		BOOKS.add(new BookBean(101012,"reactjs","misko","adam","js"));
 		BOOKS.add(new BookBean(101013,"computers","charles","aborns","programing"));
 
 	}
